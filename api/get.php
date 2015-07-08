@@ -30,7 +30,7 @@
 			'method' => 'get'
 		)
 		//array_push($result,'meta'=>$meta);
-
+/*
 		//error message
 		$error = array(
 			'message' => 'Error. user data is NULL'
@@ -42,7 +42,8 @@
 			'meta'=>$meta,
 			'error'=>$error
 		)
-    	echo json_encode($result);
+*/
+    	echo json_encode($meta);
 		}
 	}
 
