@@ -37,9 +37,9 @@
     	);
 
     	$userData=array(
-    		'userData1'=>$userData1,
-    		'userData2'=>$userData2
-    	)
+    		'userData1' => $userData1,
+    		'userData2' => $userData2
+    	);
 
     	echo json_encode($userData);
 	}
