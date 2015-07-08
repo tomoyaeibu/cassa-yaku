@@ -13,7 +13,8 @@
 
 <!-- //tweet form-->
 <form method="post" action="post.php"><div class="post">
-	<p id="post_area"><textarea name="content" rows="8" cols="40"></textarea></p>
+	<p><input name="userName" type="hidden"  value=<?php echo $userName?>></p><!--userNamer値を渡す-->
+	<p id="post_area"><input name="content" type="text" rows="8" cols="40"></textarea></p>
 	<p id="post_button"><input name="submit" type="submit" value="ささやく"></p>
 </div></form>
 
