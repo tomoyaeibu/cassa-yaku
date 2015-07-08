@@ -30,15 +30,19 @@
 			'url' => 'api/get.json',
 			'method' => 'get'
 		)
-		array_push($result,'meta'=>$meta);
+		//array_push($result,'meta'=>$meta);
 
 		//error message
 		$error = array{
 			'message' => 'Error. user data is NULL'
 		}
-		array_push($result,'error'=>$error);
+		//array_push($result,'error'=>$error);
 
 		//to json
+		$result = array(
+			'meta'=>$meta,
+			'error'=>$error
+		)
     	echo json_encode($result);
 		}
 	}
