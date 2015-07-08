@@ -9,9 +9,12 @@
 
 
 <?php
-	$userName = mb_convert_encoding($_POST['userName'],"UTF-8", "auto");
-	$content = mb_convert_encoding($_POST['content'],"UTF-8", "auto");
-	
+	//$userName = mb_convert_encoding($_POST['userName'],"UTF-8", "auto");
+	//$content = mb_convert_encoding($_POST['content'],"UTF-8", "auto");
+	$userName = strval($_POST['userName']);
+	$content = strval($_POST['content']);
+
+
 	// mongo Instance
 	$mongo = new Mongo();
 	// select DB and Collection
@@ -19,7 +22,7 @@
 	$coll = $db->selectCollection("user-Tweets");
 
 	$coll->update(
-		array('tweet_ID' => time()),
+		array('tweet_ID' => "test",
     	$postData = array('$set' => array(
     		'user_name' => $userName,
     		'timestamp' => time(),
