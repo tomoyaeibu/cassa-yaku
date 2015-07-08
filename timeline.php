@@ -13,7 +13,7 @@
 
 <!-- //tweet form-->
 <form method="post" action="post.php"><div class="post">
-	<p id="post_area"><textarea name="content" rows="8" cols="40"><?php echo $userName ?></textarea></p>
+	<p id="post_area"><textarea name="content" rows="8" cols="40"></textarea></p>
 	<p id="post_button"><input name="submit" type="submit" value="ささやく"></p>
 </div></form>
 
@@ -25,7 +25,7 @@
 <?php foreach ($tweetList as $tweet){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
-		<p><?php echo var_dump($tweet);?></p>
+		<p><?php echo $tweet => "content";?></p>
 	</div>
 <?php } ?>
 </div>
