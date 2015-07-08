@@ -24,11 +24,10 @@
 
 	$coll->update(
 		array('tweet_ID' => test),
-    	$postData = array('$set' => array(
+    	$postData = array(
     		'user_name' => $userName,
     		'timestamp' => time(),
     		'content' => $content
-    		)
    	 	), 
     	array('upsert' => true) 
 	);
