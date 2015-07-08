@@ -24,7 +24,7 @@
 
 <!-- // print tweets -->
 <div id="tweets_area">
-<?php foreach ($List as $obj){ ?>
+<?php foreach ($tweetList as $obj){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
 		<p><?php echo var_dump($obj);?></p>

@@ -6,8 +6,8 @@
 	$coll = $db->selectCollection("user-Tweets");
 
 	// read all Oject
-	$List = $coll->find();
+	$tweetList = $coll->find();
 	// sort by "timestamp"
-	$List -> sort(array('timestamp' => 1));
+	$tweetList -> sort(array('timestamp' => 1));
 
 ?>
