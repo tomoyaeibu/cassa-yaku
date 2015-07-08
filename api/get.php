@@ -7,7 +7,8 @@
 	
 	//main (Rooting end Exception Handling)
 	if(isset($_REQUEST['user'])){
-		get($_REQUEST['user']);
+		$userName = $_REQUEST['user'];
+		get($userName);
 	}else{
 		exception_noParameter();
 	}
@@ -16,7 +17,26 @@
 	int get($userName)
 	---------------------------------------*/
 	function get($userName){
-		
+		//meta infomation
+		$meta = metaInformation();
+/*
+		// mongo Instance
+		$mongo = new Mongo();
+		// select DB and Collection
+		$db = $mongo->selectDB("cassa-yaku");
+		$coll = $db->selectCollection("user-Tweets");
+
+		// read all Oject
+		$userQuery = array('user_name' => $userName);
+		$tweetList = $coll->find($userQuery);
+		// sort by "timestamp"
+		$tweetList -> sort(array('timestamp' => -1));
+
+		// reponse
+		foreach ($tweetList as $tweet){
+			$response[]=$tweet;
+		}
+*/	
 	}
 
 	/*---------- Exception [noParameter]----------
