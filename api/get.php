@@ -23,12 +23,23 @@
 	void exception_noParameter()
 	---------------------------------------------*/
 	function exception_noParameter(){
-		$userData=array(
+		$userData1=array(
     		'id'=>'1',
     		'name'=>'Abe Tomoya',
     		'age'=>'23',
     		'sex'=>'male'
     	);
+    	$userData2=array(
+    		'id'=>'1',
+    		'name'=>'Abe Tomoya',
+    		'age'=>'23',
+    		'sex'=>'male'
+    	);
+
+    	$userData=array(
+    		'userData1'=>$userData1,
+    		'userData2'=>$userData2
+    	)
 
     	echo json_encode($userData);
 	}
