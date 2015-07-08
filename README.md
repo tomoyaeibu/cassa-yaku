@@ -1,3 +1,6 @@
 # cassa-yaku
-cassandraを使ってささやくwebアプリです。
-cassandraではなくmongoDBに移行
+cassandraで動作するtwitterライクなwebアプリ。
+思う存分ささやいてください。
+
+cassandraではなくmongoDBに移行。
+mongoDBが動作しているサーバーで動作します。
