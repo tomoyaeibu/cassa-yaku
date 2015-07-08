@@ -23,25 +23,24 @@
 	void exception_noParameter()
 	---------------------------------------------*/
 	function exception_noParameter(){
-		$userData1=array(
-    		'id'=>'1',
-    		'name'=>'Abe Tomoya',
-    		'age'=>'23',
-    		'sex'=>'male'
-    	);
-    	$userData2=array(
-    		'id'=>'1',
-    		'name'=>'Abe Tomoya',
-    		'age'=>'23',
-    		'sex'=>'male'
-    	);
+		$result = array();
 
-    	$userData=array(
-    		'userData1' => $userData1,
-    		'userData2' => $userData2
-    	);
+		//meta infomation
+		$meta = array(
+			'url' => 'api/get.json',
+			'method' => 'get'
+		)
+		array_push($result,'meta'=>$meta);
 
-    	echo json_encode($userData);
+		//error message
+		$error = array{
+			'message' => 'Error. user data is NULL'
+		}
+		array_push($result,'error'=>$error);
+
+		//to json
+    	echo json_encode($result);
+		}
 	}
 
 ?>
