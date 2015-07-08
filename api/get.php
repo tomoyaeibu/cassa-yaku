@@ -25,6 +25,7 @@
 	function exception_noParameter(){
 
 		//meta infomation
+		echo ("aaa");
 		$meta = array(
 			'url' => 'api/get.json',
 			'method' => 'get'
