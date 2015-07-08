@@ -9,8 +9,8 @@
 
 
 <?php
-	$userName = $_POST['userName'];
-	$content = $_POST['content'];
+	$userName = strval($_POST['userName']);
+	$content = strval($_POST['content']);
 	
 	// mongo Instance
 	$mongo = new Mongo();
@@ -19,7 +19,7 @@
 	$coll = $db->selectCollection("user-Tweets");
 
 	$coll->update(
-		array('tweet_ID' => time()),
+		array('tweet_ID' => 'test',
     	$postData = array('$set' => array(
     		'user_name' => $userName,
     		'timestamp' => time(),
