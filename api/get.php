@@ -19,7 +19,7 @@
 	function get($userName){
 		//meta infomation
 		$meta = metaInformation();
-/*
+
 		// mongo Instance
 		$mongo = new Mongo();
 		// select DB and Collection
@@ -36,7 +36,7 @@
 		foreach ($tweetList as $tweet){
 			$response[]=$tweet;
 		}
-*/	
+	
 
 		//to json
 		$result = array(
