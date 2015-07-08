@@ -20,8 +20,18 @@
 
 <?php require 'get.php'; ?>
 
+<?php
+<div id="tweets_area">
+	foreach ($docs as $obj){
+		<div class="posts">
+			<img src="images/icon1.jpg" class="icon" width=50 height50>
+			<p>echo var_dump($obj);</p>
+		</div>
+	} 
+</div>
+?>
 
-<div id="twieet_area">
+<div id="tweets_area">
 <?php foreach ($docs as $obj){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
