@@ -37,6 +37,13 @@
 			$response[]=$tweet;
 		}
 */	
+
+		//to json
+		$result = array(
+			'meta'=>$meta,
+			'response'=>$response
+		);
+    	echo json_encode($result);
 	}
 
 	/*---------- Exception [noParameter]----------
