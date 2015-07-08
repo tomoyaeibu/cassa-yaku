@@ -9,8 +9,9 @@ $coll = $db->selectCollection("user-Tweets");
 
 $content = "今日も暑いですね";
 $coll->update(
-	array('user_name' => 'eibu'),
+	array('tweet_ID' => '001'),
     array('$set' => array(
+    	'user_name' => 'eibu',
     	'timestamp' => time(),
     	'content' => $content
     	)
@@ -20,8 +21,9 @@ $coll->update(
 
 $content = "暑い！耐えられん！";
 $coll->update(
-	array('user_name' => 'eibu'),
+	array('tweet_ID' => '002'),
     array('$set' => array(
+    	'user_name' => 'eibu',
     	'timestamp' => time(),
     	'content' => $content
     	)
