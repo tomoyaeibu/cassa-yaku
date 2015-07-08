@@ -10,6 +10,7 @@
 <div id="content">
 <br>
 
+
 <?php $userName = $_POST['userName'] ?>
 <form method="post" action="post.php"><div class="post">
 	<p><input name="userName" type="hidden"  value=<?php echo $userName?>></p>
