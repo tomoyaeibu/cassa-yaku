@@ -12,23 +12,46 @@
 		exception_noParameter();
 	}
 
-	/*---------- Read from MongoDB----------
-	int get($userName)
+	/*---------- Post to MongoDB----------
+	int post($userName)
 	---------------------------------------*/
 	function post($userName){
 		//meta infomation
 		$meta = metaInformation();
 
+		// mongo Instance
+		$mongo = new Mongo();
+		// select DB and Collection
+		$db = $mongo->selectDB("cassa-yaku");
+		$coll = $db->selectCollection("user-Tweets");
 
-		//success message
-		$success = array(
-			'message' => 'successfully completed'
+		$successOrNot=$coll->update(
+			array('tweet_ID' => time()),
+    		$postData = array(
+    			'user_name' => $userName,
+    			'timestamp' => time(),
+    			'content' => $content
+   	 		), 
+    		array('upsert' => true) 
 		);
+
+		//check status
+		if($successOrNot){
+			//success message
+			$status = array(
+				'message' => 'successfully completed'
+			);
+		}else{
+			//failure message
+			$status = array(
+				'message' => 'unccessfully failed over'
+			);
+		}
 
 		//to json
 		$result = array(
 			'meta'=>$meta,
-			'success'=>$success
+			'status'=>$status
 		);
     	echo json_encode($result);
 	}
