@@ -11,10 +11,6 @@
 <?php
 	$userName = $_POST['userName'];
 	$content = $_POST['content'];
-	var_dump($content);
-
-	$content = "テスト";
-	var_dump($content);
 	
 	// mongo Instance
 	$mongo = new Mongo();
@@ -23,7 +19,7 @@
 	$coll = $db->selectCollection("user-Tweets");
 
 	$coll->update(
-		array('tweet_ID' => test),
+		array('tweet_ID' => time(),
     	$postData = array(
     		'user_name' => $userName,
     		'timestamp' => time(),
@@ -32,13 +28,12 @@
     	array('upsert' => true) 
 	);
 
-	echo var_dump($postData);
 ?>
 
 <!--ユーザーネームをタイムラインに戻す-->
 <form name="namePost" method="post" action="timeline.php">
 <p><input name="userName" type="hidden" value=<?php echo $userName?>></p>
-<!--<SCRIPT language="JavaScript">document.namePost.submit();</SCRIPT>-->
+<SCRIPT language="JavaScript">document.namePost.submit();</SCRIPT>
 </form>
 
 
