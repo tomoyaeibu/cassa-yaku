@@ -23,7 +23,6 @@
 	void exception_noParameter()
 	---------------------------------------------*/
 	function exception_noParameter(){
-		$result = array();
 
 		//meta infomation
 		$meta = array(
@@ -33,9 +32,9 @@
 		//array_push($result,'meta'=>$meta);
 
 		//error message
-		$error = array{
+		$error = array(
 			'message' => 'Error. user data is NULL'
-		}
+		)
 		//array_push($result,'error'=>$error);
 
 		//to json
