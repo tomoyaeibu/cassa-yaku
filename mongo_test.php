@@ -59,6 +59,7 @@ $coll->update(
 
 
 // [[[[read section]]]]
+/*
 // read all Oject
 $docs = $coll->find();
 // sort by "timestamp"
@@ -69,4 +70,5 @@ foreach ($docs as $obj) {
     print var_dump($obj);
     print ("\n");
 }
+*/
 ?>
