@@ -14,7 +14,7 @@
 <!-- //tweet form-->
 <form method="post" action="post.php"><div class="post">
 	<input name="userName" type="hidden"  value=<?php echo $userName?>><!--userNamer値を渡す-->
-	<input name="content" type="text" style="width:200px;height:50px;"></textarea>
+	<textarea name="content" type="text" style="width:200px;height:50px;"></textarea>
 	<input name="submit" type="submit" value="ささやく">
 </div></form>
 
