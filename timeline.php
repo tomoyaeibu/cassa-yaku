@@ -22,9 +22,9 @@
 <!-- //get tweets -->
 <?php require 'get.php'; ?>
 
-<!-- //print tweets -->
+<!-- // print tweets -->
 <div id="tweets_area">
-<?php foreach ($tweetList as $obj){ ?>
+<?php foreach ($docs as $obj){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
 		<p><?php echo var_dump($obj);?></p>
