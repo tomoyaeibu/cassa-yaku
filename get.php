@@ -9,10 +9,5 @@
 	$docs = $coll->find();
 	// sort by "timestamp"
 	$docs -> sort(array('timestamp' => 1));
-
-	// [print section] 
-	foreach ($docs as $obj) {
-    	print var_dump($obj);
-    	print ("\n");
-	}
+	
 ?>
