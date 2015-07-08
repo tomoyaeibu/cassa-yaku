@@ -30,7 +30,7 @@
     		$postData = array(
     			'user_name' => $userName,
     			'timestamp' => time(),
-    			'content' => $content
+    			'content' => $c1ontent
    	 		), 
     		array('upsert' => true) 
 		);
@@ -53,7 +53,7 @@
 			'meta'=>$meta,
 			'status'=>$status
 		);
-    	echo json_encode($result);
+		echo json_encode($result);
 	}
 
 	/*---------- Exception [noParameter]----------
@@ -73,7 +73,7 @@
 			'meta'=>$meta,
 			'error'=>$error
 		);
-    	echo json_encode($result);
+		echo json_encode($result);
 	}
 
 	/*---------- Infotmation of meta ------------
