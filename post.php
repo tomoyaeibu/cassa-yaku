@@ -19,13 +19,12 @@
 	$db = $mongo->selectDB("cassa-yaku");
 	$coll = $db->selectCollection("user-Tweets");
 
-	$content = $_POST['content'];
 	$coll->update(
 		array('tweet_ID' => time()),
     	array('$set' => array(
     		'user_name' => $userName,
     		'timestamp' => time(),
-    		'content' => $content
+    		'content' => $_POST['content']
     		)
    	 	), 
     	array('upsert' => true) 
