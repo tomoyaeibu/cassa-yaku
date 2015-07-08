@@ -36,7 +36,6 @@
 		foreach ($tweetList as $tweet){
 			$response[]=$tweet;
 		}
-	
 
 		//to json
 		$result = array(
@@ -72,7 +71,8 @@
 	function metaInformation(){
 		$meta = array(
 			'url' => 'api/get.json',
-			'method' => 'get'
+			'method' => 'get',
+			'user' => $_REQUEST['user']
 		);
 		return($meta);
 	}
