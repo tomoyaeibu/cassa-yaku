@@ -7,8 +7,7 @@
 	
 	//main (Rooting end Exception Handling)
 	if(isset($_REQUEST['user'])){
-		$userName = $_REQUEST['user'];
-		get($userName);
+		get($_REQUEST['user']);
 	}else{
 		exception_noParameter();
 	}

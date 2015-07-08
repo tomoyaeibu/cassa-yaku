@@ -1,50 +1,69 @@
 <?php
-	//header('Access-Control-Allow-Origin:*');
-	header("Content-Type: text/xml");
-	require(dirname(__FILE__).'/lib/autoload.php');
-	use phpcassa\ColumnFamily;
-	use phpcassa\ColumnSlice;
-	use phpcassa\Connection\ConnectionPool;
-
-	//main
-	echo('<test>');
-	if(isset($_REQUEST['user'])){
-		echo('<user>'.$_REQUEST['user'].'</user>');
-		echo('<data>'.$_REQUEST['data'].'</data>');
-		echo('<result>'.set($_REQUEST['user'],$_REQUEST['data']).'</result>');
+	header('Content-type: application/json');
+	mb_language("uni");
+	mb_internal_encoding("utf-8");
+	mb_http_input("auto");
+	mb_http_output("utf-8");
+	
+	//main (Rooting end Exception Handling)
+	if(isset($_REQUEST['user']) and isset($_REQUEST['content'])){
+		post($_REQUEST['user']);
 	}else{
-		echo ("<result>Error. user data is 'null', or not Numeric.</result>");
+		exception_noParameter();
 	}
- 	echo('</test>');
- 
- 	//cassandraへの書き込み
- 	function set($userName,$value){
 
- 		try{
-			//setting of IP address
-			$servers = array('localhost:9160');
-			//setting of Keyspace and ColumnFamily
-			$pool = new ConnectionPool('Standard1', $servers);
-			$column_family = new ColumnFamily($pool, 'user');
-		
-			//insert data
-			$column_family->insert($userName,
-				array(
-						time()=> $value
-				)
-			);
+	/*---------- Read from MongoDB----------
+	int get($userName)
+	---------------------------------------*/
+	function post($userName){
+		//meta infomation
+		$meta = metaInformation();
 
-			$pool->close();
-			return('success!');				
-		
- 		}catch(phpcassa\Connection\NoServerAvailable $e){
-				return('error!');
-		}catch(phpcassa\Connection\MaxRetriesException $e){
-				return('error!');
-		}catch(Exception $e){
-				return('error!');
-		}
 
- 	}
- 
+		//success message
+		$success = array(
+			'message' => 'successfully completed'
+		);
+
+		//to json
+		$result = array(
+			'meta'=>$meta,
+			'success'=>$success
+		);
+    	echo json_encode($result);
+	}
+
+	/*---------- Exception [noParameter]----------
+	void exception_noParameter()
+	---------------------------------------------*/
+	function exception_noParameter(){
+		//meta infomation
+		$meta = metaInformation();
+
+		//error message
+		$error = array(
+			'message' => 'Error. user data or content data is NULL'
+		);
+
+		//to json
+		$result = array(
+			'meta'=>$meta,
+			'error'=>$error
+		);
+    	echo json_encode($result);
+	}
+
+	/*---------- Infotmation of meta ------------
+	Array metaInformation()
+	---------------------------------------------*/
+	function metaInformation(){
+		$meta = array(
+			'url' => 'api/post.json',
+			'method' => 'post',
+			'user' => $_REQUEST['user']
+		);
+		return($meta);
+	}
+
+
 ?>
