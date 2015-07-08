@@ -11,6 +11,10 @@
 <?php
 	$userName = $_POST['userName'];
 	$content = $_POST['content'];
+	var_dump($content);
+
+	$content = "テスト";
+	var_dump($content);
 	
 	// mongo Instance
 	$mongo = new Mongo();
