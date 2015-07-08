@@ -1,0 +1,54 @@
+.posts{
+	width: 200px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+	position: relative;
+	height: 100px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	background-image: url(images/posts_backgroud.jpg);
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-left: 120px;
+	
+	width : 200px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+}
+
+p{
+	line-height: 25px;
+}
+
+.icon{
+	position: absolute;
+	top: 35px;
+	left: 35px;
+}
+
+#content{
+	background: rgba(255, 255, 255, 0.4); 
+	width: 500px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	
+}
+
+.post{
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#post_button{
+	
+}
