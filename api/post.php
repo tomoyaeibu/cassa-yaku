@@ -7,15 +7,15 @@
 	
 	//main (Rooting end Exception Handling)
 	if(isset($_REQUEST['user']) and isset($_REQUEST['content'])){
-		post($_REQUEST['user']);
+		post($_REQUEST['user'],$_REQUEST['content']);
 	}else{
 		exception_noParameter();
 	}
 
 	/*---------- Post to MongoDB----------
-	int post($userName)
+	int post($userName, &content)
 	---------------------------------------*/
-	function post($userName){
+	function post($userName, $content){
 		//meta infomation
 		$meta = metaInformation();
 
