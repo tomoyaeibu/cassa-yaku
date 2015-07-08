@@ -6,9 +6,9 @@ $db = $mongo->selectDB("cassa-yaku");
 $coll = $db->selectCollection("user-Tweets");
 
 // [[[[write section]]]]
-/*
+
 $content = "今日も暑いですね 7/1";
-$coll->update(
+$result = $coll->update(
 	array('tweet_ID' => '001'),
     array('$set' => array(
     	'user_name' => 'eibu',
@@ -18,7 +18,8 @@ $coll->update(
     ), 
     array('upsert' => true) 
 );
-
+print var_dump(result);
+/*
 $content = "暑い！耐えられん！ 7/3";
 $coll->update(
 	array('tweet_ID' => '002'),
