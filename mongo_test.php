@@ -9,17 +9,23 @@ $coll = $db->selectCollection("user-Tweets");
 
 $content = "今日も暑いですね";
 $coll->update(
-    array('$set' => array('user_name' => 'eibu')), 
-    array('$set' => array('timestamp' => time())), 
-    array('$set' => array('content' => $content)), 
+    array('$set' => array(
+    	'user_name' => 'eibu',
+    	'timestamp' => time(),
+    	'content' => $content
+    	)
+    ), 
     array('upsert' => true) 
 );
 
 $content = "暑い！耐えられん！";
 $coll->update(
-    array('$set' => array('user_name' => 'eibu')), 
-    array('$set' => array('timestamp' => time())), 
-    array('$set' => array('content' => $content)), 
+    array('$set' => array(
+    	'user_name' => 'eibu',
+    	'timestamp' => time(),
+    	'content' => $content
+    	)
+    ), 
     array('upsert' => true) 
 );
 
