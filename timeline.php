@@ -24,10 +24,10 @@
 
 <!-- //print tweets -->
 <div id="tweets_area">
-<?php foreach ($tweetList as $tweet){ ?>
+<?php foreach ($docs as $obj){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
-		<p><?php echo var_dump($tweet);?></p>
+		<p><?php echo var_dump($obj);?></p>
 	</div>
 <?php } ?>
 </div>
