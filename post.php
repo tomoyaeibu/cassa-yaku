@@ -29,13 +29,12 @@
     	array('upsert' => true) 
 	);
 
-	echo var_dump($postData);
 ?>
 
 <!--ユーザーネームをタイムラインに戻す-->
 <form name="namePost" method="post" action="timeline.php">
 <p><input name="userName" type="hidden" value=<?php echo $userName?>></p>
-<!--<SCRIPT language="JavaScript">document.namePost.submit();</SCRIPT>-->
+<SCRIPT language="JavaScript">document.namePost.submit();</SCRIPT>
 </form>
 
 
