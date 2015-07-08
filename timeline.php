@@ -9,10 +9,9 @@
 <body>
 <div id="content">
 <br>
-
+<?php $userName = $_POST['userName'] ?>
 
 <!-- //tweet form-->
-<?php $userName = $_POST['userName'] ?>
 <form method="post" action="post.php"><div class="post">
 	<p><input name="userName" type="hidden"  value=<?php echo $userName?>></p>
 	<p id="post_area"><textarea name="content" rows="8" cols="40"><?php echo $content ?></textarea></p>
