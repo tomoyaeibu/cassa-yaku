@@ -19,7 +19,7 @@
 	$coll = $db->selectCollection("user-Tweets");
 
 	$coll->update(
-		array('tweet_ID' => time(),
+		array('tweet_ID' => time()),
     	$postData = array(
     		'user_name' => $userName,
     		'timestamp' => time(),
