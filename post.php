@@ -19,7 +19,7 @@
 	$db = $mongo->selectDB("cassa-yaku");
 	$coll = $db->selectCollection("user-Tweets");
 
-	$content = "テスト";
+	$content = $_POST['content'];
 	$coll->update(
 		array('tweet_ID' => time()),
     	array('$set' => array(
