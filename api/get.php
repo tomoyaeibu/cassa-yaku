@@ -23,7 +23,7 @@
 	void exception_noParameter()
 	---------------------------------------------*/
 	function exception_noParameter(){
-		$userData[]=array(
+		$userData=array(
     		'id'=>'1',
     		'name'=>'Abe Tomoya',
     		'age'=>'23',
