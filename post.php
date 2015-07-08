@@ -10,7 +10,9 @@
 
 <?php
 	$userName = $_POST['userName'];
+	$content = $_POST['content'];
 	echo $userName;
+	echo $content;
 ?>
 
 <!--ユーザーネームをタイムラインに戻す-->
