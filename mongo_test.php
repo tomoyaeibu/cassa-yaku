@@ -49,7 +49,7 @@ $coll->update(
 // read all Oject
 $docs = $coll->find();
 // sort by "timestamp"
-$docs -> sort(array('tamestamp' => 1));
+$docs -> sort(array('timestamp' => 1));
 
 // [print section] 
 foreach ($docs as $obj) {
