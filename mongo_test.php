@@ -43,6 +43,18 @@ $coll->update(
     array('upsert' => true) 
 );
 
+$content = "私は別の人です";
+$coll->update(
+	array('tweet_ID' => '004'),
+    array('$set' => array(
+    	'user_name' => 'Abe',
+    	'timestamp' => time()+10,
+    	'content' => $content
+    	)
+    ), 
+    array('upsert' => true) 
+);
+
 
 
 // [[[[read section]]]]
