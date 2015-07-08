@@ -9,8 +9,8 @@
 
 
 <?php
-	$userName = $_POST['userName'];
-	$content = $_POST['content'];
+	$userName = mb_convert_encoding($_POST['userName'],"UTF-8", "auto");
+	$content = mb_convert_encoding($_POST['content'],"UTF-8", "auto");
 	
 	// mongo Instance
 	$mongo = new Mongo();
