@@ -40,7 +40,7 @@
 			'meta'=>$meta,
 			'error'=>$error
 		);
-    	echo json_encode($meta);
+    	echo json_encode($result);
 	}
 
 ?>
