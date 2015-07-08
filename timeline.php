@@ -26,7 +26,7 @@
 <?php foreach ($tweetList as $tweet){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
-		<p><?php echo "("+$tweet['content']+")"; ?></p>
+		<p><?php echo $tweet['content']; ?></p>
 	</div>
 <?php } ?>
 </div>
