@@ -7,7 +7,7 @@ $coll = $db->selectCollection("user-Tweets");
 
 // [[[[write section]]]]
 
-$content = "今日も暑いですね";
+$content = "今日も暑いですね 7/1";
 $coll->update(
 	array('tweet_ID' => '001'),
     array('$set' => array(
@@ -19,7 +19,7 @@ $coll->update(
     array('upsert' => true) 
 );
 
-$content = "暑い！耐えられん！";
+$content = "暑い！耐えられん！ 7/3";
 $coll->update(
 	array('tweet_ID' => '002'),
     array('$set' => array(
@@ -30,6 +30,19 @@ $coll->update(
     ), 
     array('upsert' => true) 
 );
+
+$content = "ちょうどいい気温♪";
+$coll->update(
+	array('tweet_ID' => '002 7/2'),
+    array('$set' => array(
+    	'user_name' => 'eibu',
+    	'timestamp' => time()+10,
+    	'content' => $content
+    	)
+    ), 
+    array('upsert' => true) 
+);
+
 
 
 // [[[[read section]]]]
