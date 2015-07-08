@@ -23,7 +23,7 @@ $coll->update(
     	'user_name' => 'eibu',
     	'timestamp' => time(),
     	'content' => $content
-    	)
+    	),
     array('upsert' => true) 
 );
 
