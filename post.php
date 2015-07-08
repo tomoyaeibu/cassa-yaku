@@ -11,7 +11,6 @@
 <?php
 	$userName = $_POST['userName'];
 	$content = $_POST['content'];
-	echo $content;
 	
 	// mongo Instance
 	$mongo = new Mongo();
@@ -21,14 +20,16 @@
 
 	$coll->update(
 		array('tweet_ID' => time()),
-    	array('$set' => array(
+    	$postData = array('$set' => array(
     		'user_name' => $userName,
     		'timestamp' => time(),
-    		'content' => $_POST['content']
+    		'content' => $content
     		)
    	 	), 
     	array('upsert' => true) 
 	);
+
+	echo var_dump($postData);
 ?>
 
 <!--ユーザーネームをタイムラインに戻す-->
