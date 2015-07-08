@@ -1,25 +1,18 @@
 <?php
-	require(dirname(__FILE__).'/lib/autoload.php');
-    use phpcassa\ColumnFamily;
-    use phpcassa\ColumnSlice;
-    use phpcassa\Connection\ConnectionPool;
-    //error_reporting(0);
+	// mongo Instance
+	$mongo = new Mongo();
+	// select DB and Collection
+	$db = $mongo->selectDB("cassa-yaku");
+	$coll = $db->selectCollection("user-Tweets");
 
-	try{
-		//接続を確立
-		$servers = array('localhost:9160');
-		$pool = new ConnectionPool('Standard1', $servers);
+	// read all Oject
+	$docs = $coll->find();
+	// sort by "timestamp"
+	$docs -> sort(array('timestamp' => 1));
 
-		//読み込み
-		$user = new ColumnFamily($pool, 'user');
-		$result = $user->get($userName);
-
-		//記事を時間順に逆転
-		$posts = array_reverse($result);    
-		
-		$pool->close();
-		
-	}catch(Exception $e){
-       //echo 'ERROR : ' . print_r($e, true);
-    }
+	// [print section] 
+	foreach ($docs as $obj) {
+    	print var_dump($obj);
+    	print ("\n");
+	}
 ?>

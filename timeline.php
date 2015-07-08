@@ -20,11 +20,12 @@
 
 <?php require 'get.php'; ?>
 
+
 <div id="twieet_area">
-<?php foreach ($posts as $key => $value){ ?>
+<?php foreach ($docs as $obj){ ?>
 	<div class="posts">
 		<img src="images/icon1.jpg" class="icon" width=50 height50>
-		<p><?php echo $value;?></p>
+		<p><?php echo var_dump($obj);?></p>
 	</div>
 <?php } ?>
 </div>
