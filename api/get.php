@@ -28,7 +28,7 @@
 		$meta = array(
 			'url' => 'api/get.json',
 			'method' => 'get'
-		)
+		);
 		//array_push($result,'meta'=>$meta);
 /*
 		//error message
