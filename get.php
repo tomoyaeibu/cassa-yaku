@@ -3,7 +3,7 @@
     use phpcassa\ColumnFamily;
     use phpcassa\ColumnSlice;
     use phpcassa\Connection\ConnectionPool;
-    error_reporting(0);
+    //error_reporting(0);
 
 	try{
 		//接続を確立
