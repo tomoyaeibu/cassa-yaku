@@ -11,8 +11,8 @@
 <?php
 	//$userName = mb_convert_encoding($_POST['userName'],"UTF-8", "auto");
 	//$content = mb_convert_encoding($_POST['content'],"UTF-8", "auto");
-	$userName = strval($_POST['userName']);
-	$content = strval($_POST['content']);
+	$userName = $_POST['userName'];
+	$content = $_POST['content'];
 
 
 	// mongo Instance
