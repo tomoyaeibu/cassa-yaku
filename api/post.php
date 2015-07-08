@@ -60,7 +60,8 @@
 		$meta = array(
 			'url' => 'api/post.json',
 			'method' => 'post',
-			'user' => $_REQUEST['user']
+			'user' => $_REQUEST['user'],
+			'content' => $_REQUEST['content'],
 		);
 		return($meta);
 	}
