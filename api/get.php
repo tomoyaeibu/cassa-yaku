@@ -23,12 +23,8 @@
 	void exception_noParameter()
 	---------------------------------------------*/
 	function exception_noParameter(){
-
 		//meta infomation
-		$meta = array(
-			'url' => 'api/get.json',
-			'method' => 'get'
-		);
+		$meta = metaInformation();
 
 		//error message
 		$error = array(
@@ -42,5 +38,17 @@
 		);
     	echo json_encode($result);
 	}
+
+	/*---------- Infotmation of meta ------------
+	Array metaInformation()
+	---------------------------------------------*/
+	function metaInformation(){
+		$meta = array(
+			'url' => 'api/get.json',
+			'method' => 'get'
+		);
+		return($meta);
+	}
+
 
 ?>
