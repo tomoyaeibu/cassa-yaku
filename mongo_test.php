@@ -24,7 +24,7 @@ $coll->update(
 	array('tweet_ID' => '002'),
     array('$set' => array(
     	'user_name' => 'eibu',
-    	'timestamp' => time(),
+    	'timestamp' => time()+30,
     	'content' => $content
     	)
     ), 
