@@ -31,9 +31,9 @@ $coll->update(
     array('upsert' => true) 
 );
 
-$content = "ちょうどいい気温♪";
+$content = "ちょうどいい気温♪ 7/2";
 $coll->update(
-	array('tweet_ID' => '002 7/2'),
+	array('tweet_ID' => '002'),
     array('$set' => array(
     	'user_name' => 'eibu',
     	'timestamp' => time()+10,
