@@ -7,7 +7,7 @@
 
 	// read all Oject
 	$userQuery = array('user_name' => $userName);
-	if($userName='nozokimi'){
+	if(stristr($userName,'nozokimi')){
 		$tweetList = $coll->find();
 	}else{
 		$tweetList = $coll->find($userQuery);
