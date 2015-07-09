@@ -16,6 +16,7 @@
 	<input name="userName" type="hidden"  value=<?php echo $userName?>><!--userNamer値を渡す-->
 	<textarea name="content" type="text" style="width:350px;height:150px;"></textarea>
 	<input name="submit" type="submit" value="ささやく">
+	<p>howto : https://github.com/tomoyaeibu/cassa-yaku</p>>
 </div></form>
 
 <!-- //get tweets -->
