@@ -7,7 +7,11 @@
 
 	// read all Oject
 	$userQuery = array('user_name' => $userName);
-	$tweetList = $coll->find($userQuery);
+	if($userName='nozokimi'){
+		$tweetList = $coll->find();
+	}else{
+		$tweetList = $coll->find($userQuery);
+	}
 	// sort by "timestamp"
 	$tweetList -> sort(array('timestamp' => -1));
 
