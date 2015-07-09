@@ -10,9 +10,9 @@ cassandraで動作するtwitterライクなwebアプリ。
 
 ### webサービスAPI
 【読み込みAPI】  
-[http://133.50.18.13/cassa-yaku/api/get?user="USER"]  
+[http://133.50.18.13/cassa-yaku/api/get?user="USER"][]  
 【書き込みAPI】  
-[http://133.50.18.13/cassa-yaku/api/post?user="USER"&content="CONTENT"]  
+[http://133.50.18.13/cassa-yaku/api/post?user="USER"&content="CONTENT"][]  
 
 ### 注意事項
 現在はcassandraではなくMongoDBに移行。  
