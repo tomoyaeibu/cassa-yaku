@@ -15,5 +15,5 @@ http://133.50.18.13/cassa-yaku/api/get?user="◯◯◯"
 http://133.50.18.13/cassa-yaku/api/post?user="◯◯◯"&content="✕✕✕"  
 
 ### 注意事項
-現在はcassandraではなくmongoDBに移行。  
-mongoDBが動作しているサーバーで動作します。
+現在はcassandraではなくMongoDBに移行。  
+MongoDBが動作しているサーバーで動作します。
